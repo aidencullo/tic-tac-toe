@@ -1,5 +1,6 @@
-board = "  |   |  \n---------\n  |   |  \n---------\n  |   |  "
-printboard state = do
+printboard = do
+  let row = "  |   |  "
+      separator = "---------"
+      board = row ++ "\n" ++ separator ++ "\n" ++ row ++ "\n" ++ separator ++ "\n" ++ row
   putStrLn board
-state = Nothing
-main = printboard state
+main = printboard

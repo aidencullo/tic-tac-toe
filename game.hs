@@ -1,2 +1,5 @@
 board = "  |   |  \n---------\n  |   |  \n---------\n  |   |  "
-main = putStrLn board
+printboard state = do
+  putStrLn board
+state = Nothing
+main = printboard state

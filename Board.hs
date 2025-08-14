@@ -1,8 +1,8 @@
 module Board where
 
-printboard :: IO ()
-printboard = do
+printboard :: Maybe String -> IO ()
+printboard board = do
   let row = "  |   |  "
       separator = "---------"
-      board = row ++ "\n" ++ separator ++ "\n" ++ row ++ "\n" ++ separator ++ "\n" ++ row
-  putStrLn board
+      boardStr = row ++ "\n" ++ separator ++ "\n" ++ row ++ "\n" ++ separator ++ "\n" ++ row
+  putStrLn boardStr

@@ -1,3 +1,3 @@
 import Board
 
-main = printboard
+main = printboard Nothing

@@ -1,2 +1,2 @@
-hello = putStrLn "hello world"
-main = hello
+board = "  |   |  \n---------\n  |   |  \n---------\n  |   |  "
+main = putStrLn board

@@ -1,3 +1,3 @@
-import Board
+import Game
 
-main = printboard Nothing
+main = play

@@ -1,6 +1,6 @@
 module Board where
 
-printboard :: Maybe String -> IO ()
+printboard :: [Int] -> IO ()
 printboard board = do
   let row = "  |   |  "
       separator = "---------"

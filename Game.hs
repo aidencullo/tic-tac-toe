@@ -12,5 +12,5 @@ play :: IO ()
 play = do
   putStrLn "Enter your move: "
   input <- getLine
-  putStrLn $ "You entered: " ++ input
   showGameState
+  play

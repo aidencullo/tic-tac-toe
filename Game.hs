@@ -2,5 +2,11 @@ module Game where
 
 import Board
 
+emptyBoard :: [Int]
+emptyBoard = replicate 9 0
+
 play :: IO ()
-play = printboard (replicate 9 0)
+play = showGameState
+
+showGameState :: IO ()
+showGameState = printBoard emptyBoard

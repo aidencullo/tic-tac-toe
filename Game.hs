@@ -5,8 +5,12 @@ import Board
 emptyBoard :: [Int]
 emptyBoard = replicate 9 0
 
-play :: IO ()
-play = showGameState
-
 showGameState :: IO ()
 showGameState = printBoard emptyBoard
+
+play :: IO ()
+play = do
+  putStrLn "Enter your move: "
+  input <- getLine
+  putStrLn $ "You entered: " ++ input
+  showGameState

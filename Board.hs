@@ -1,5 +1,8 @@
 module Board where
 
+emptyBoard :: [Int]
+emptyBoard = replicate 9 0
+
 printBoard :: [Int] -> IO ()
 printBoard board = do
   let row = "  |   |  "

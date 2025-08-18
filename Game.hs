@@ -1,16 +1,20 @@
 module Game where
 
 import Board
-
-emptyBoard :: [Int]
-emptyBoard = replicate 9 0
-
+  
 showGameState :: IO ()
 showGameState = printBoard emptyBoard
 
-play :: IO ()
-play = do
+type Move = String
+
+getMove :: IO Move
+getMove = do
   putStrLn "Enter your move: "
   input <- getLine
+  return input
+
+play :: IO ()
+play = do
+  move <- getMove
   showGameState
   play

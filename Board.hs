@@ -1,6 +1,6 @@
 module Board where
 
-type GameState = Maybe Int
+import Types
 
 emptyBoard :: [Int]
 emptyBoard = replicate 9 0

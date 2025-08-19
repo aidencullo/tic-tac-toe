@@ -23,5 +23,5 @@ evolve :: GameState -> IO GameState
 evolve state = do
   move <- enterMove
   let newState = processMove state move
-  showBoard newState
+  displayBoard newState
   evolve newState

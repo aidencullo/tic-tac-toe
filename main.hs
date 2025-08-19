@@ -1,4 +1,4 @@
 import Game
 
-main :: IO (Maybe Int)
+main :: IO GameState
 main = play

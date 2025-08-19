@@ -1,5 +1,7 @@
 module Board where
 
+type GameState = Maybe Int
+
 emptyBoard :: [Int]
 emptyBoard = replicate 9 0
 
@@ -10,5 +12,5 @@ printBoard board = do
       boardStr = row ++ "\n" ++ separator ++ "\n" ++ row ++ "\n" ++ separator ++ "\n" ++ row
   putStrLn boardStr
 
-showBoard :: Maybe Int -> IO ()
+showBoard :: GameState -> IO ()
 showBoard state = printBoard emptyBoard

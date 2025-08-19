@@ -1,6 +1,7 @@
 module Game where
 
 import Board
+import Types
 
 type Move = String
 
@@ -9,19 +10,19 @@ getMove = do
   putStrLn "Enter your move: "
   getLine
 
-state :: Maybe Int
+state :: GameState
 state = Nothing
 
-play :: IO (Maybe Int)
+play :: IO GameState
 play = start
 
-start :: IO (Maybe Int)
+start :: IO GameState
 start = evolve state
 
-processMove :: Maybe Int -> String -> Maybe Int
+processMove :: GameState -> String -> GameState
 processMove state move = Nothing
 
-evolve :: Maybe Int -> IO (Maybe Int)
+evolve :: GameState -> IO GameState
 evolve state = do
   move <- getMove
   let newState = processMove state move

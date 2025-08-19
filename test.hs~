@@ -1,1 +1,4 @@
-x = 1
+myCompare x y
+  | x < y = LT
+  | y > x = GT
+  otherwise = EQ

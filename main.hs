@@ -1,5 +1,5 @@
 import Game
 import Types
 
-main :: IO GameState
+main :: IO State
 main = start

@@ -10,18 +10,18 @@ enterMove = do
   putStrLn "Enter your move: "
   getLine
 
-emptyState :: GameState
-emptyState = Nothing
+state :: State
+state = Nothing
 
-start :: IO GameState
-start = evolve emptyState
+start :: IO State
+start = evolve state
 
-processMove :: GameState -> String -> GameState
-processMove state move = Nothing
+process :: State -> String -> State
+process state move = Nothing
 
-evolve :: GameState -> IO GameState
+evolve :: State -> IO State
 evolve state = do
   move <- enterMove
-  let newState = processMove state move
+  let newState = process state move
   displayBoard newState
   evolve newState

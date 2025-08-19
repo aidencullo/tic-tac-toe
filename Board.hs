@@ -12,5 +12,5 @@ printBoard board = do
       boardStr = row ++ "\n" ++ separator ++ "\n" ++ row ++ "\n" ++ separator ++ "\n" ++ row
   putStrLn boardStr
 
-displayBoard :: GameState -> IO ()
+displayBoard :: State -> IO ()
 displayBoard state = printBoard emptyBoard

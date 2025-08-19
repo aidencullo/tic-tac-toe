@@ -1,3 +1,3 @@
 module Types where
 
-type GameState = Maybe Int
+type State = Maybe Int

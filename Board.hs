@@ -9,3 +9,6 @@ printBoard board = do
       separator = "---------"
       boardStr = row ++ "\n" ++ separator ++ "\n" ++ row ++ "\n" ++ separator ++ "\n" ++ row
   putStrLn boardStr
+
+showBoard :: Maybe Int -> IO ()
+showBoard state = printBoard emptyBoard

@@ -2,8 +2,8 @@ module Game where
 
 import Board
   
-showGameState :: Maybe Int -> IO ()
-showGameState state = printBoard emptyBoard
+showBoard :: Maybe Int -> IO ()
+showBoard state = printBoard emptyBoard
 
 type Move = String
 
@@ -32,5 +32,5 @@ evolve :: Maybe Int -> IO (Maybe Int)
 evolve state = do
   move <- getMove
   let newState = processMove state move
-  showGameState newState
+  showBoard newState
   evolve newState

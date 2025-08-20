@@ -18,8 +18,11 @@ process :: State -> String -> State
 process state move = initialState
 
 evolve :: State -> IO State
+printState :: State -> IO ()
+printState state = printBoard state
+
 evolve state = do
   move <- enterMove
   let newState = process state move
-  printBoard 
+  printState newState
   evolve newState

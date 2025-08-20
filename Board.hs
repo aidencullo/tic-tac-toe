@@ -2,15 +2,9 @@ module Board where
 
 import Types
 
-emptyBoard :: [Int]
-emptyBoard = replicate 9 0
-
-printBoard :: [Int] -> IO ()
+printBoard :: IO ()
 printBoard = do
   let row = "  |   |  "
       separator = "---------"
       boardStr = row ++ "\n" ++ separator ++ "\n" ++ row ++ "\n" ++ separator ++ "\n" ++ row
   putStrLn boardStr
-
-displayBoard :: State -> IO ()
-displayBoard state = printBoard emptyBoard

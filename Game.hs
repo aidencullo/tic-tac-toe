@@ -21,5 +21,5 @@ evolve :: State -> IO State
 evolve state = do
   move <- enterMove
   let newState = process state move
-  displayBoard newState
+  printBoard
   evolve newState

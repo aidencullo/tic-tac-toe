@@ -6,7 +6,7 @@ emptyBoard :: [Int]
 emptyBoard = replicate 9 0
 
 printBoard :: [Int] -> IO ()
-printBoard board = do
+printBoard = do
   let row = "  |   |  "
       separator = "---------"
       boardStr = row ++ "\n" ++ separator ++ "\n" ++ row ++ "\n" ++ separator ++ "\n" ++ row

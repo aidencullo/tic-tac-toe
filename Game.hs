@@ -3,8 +3,6 @@ module Game where
 import Board
 import Types
 
-type Move = String
-
 enterMove :: IO Move
 enterMove = do
   putStrLn "Enter your move: "

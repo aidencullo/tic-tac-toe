@@ -1,4 +1,4 @@
 module Types where
 
-type State = Maybe Int
+type State = [Int]
 type Move = String

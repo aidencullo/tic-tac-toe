@@ -9,17 +9,17 @@ enterMove = do
   getLine
 
 initialState :: State
-initialState = Nothing
+initialState = replicate 9 0
 
 start :: IO State
 start = evolve initialState
 
 process :: State -> String -> State
-process state move = Nothing
+process state move = initialState
 
 evolve :: State -> IO State
 evolve state = do
   move <- enterMove
   let newState = process state move
-  printBoard
+  printBoard 
   evolve newState

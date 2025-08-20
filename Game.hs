@@ -8,11 +8,11 @@ enterMove = do
   putStrLn "Enter your move: "
   getLine
 
-state :: State
-state = Nothing
+initialState :: State
+initialState = Nothing
 
 start :: IO State
-start = evolve state
+start = evolve initialState
 
 process :: State -> String -> State
 process state move = Nothing

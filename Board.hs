@@ -5,7 +5,11 @@ import Types
 printBoard :: State -> IO ()
 printBoard state = do
   let boardStr = createBoard state
+  putStrLn ""
+  putStrLn ""
   putStrLn boardStr
+  putStrLn ""
+  putStrLn ""
 
 createBoard state = createRow state
 

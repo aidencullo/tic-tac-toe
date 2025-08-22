@@ -19,7 +19,7 @@ process state move = initialState
 
 evolve :: State -> IO State
 printState :: State -> IO ()
-printState state = printBoard state
+printState state = displayBoard state
 
 evolve state = do
   move <- enterMove

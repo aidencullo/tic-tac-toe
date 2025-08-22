@@ -2,14 +2,17 @@ module Board where
 
 import Types
 
-printBoard :: State -> IO ()
-printBoard state = do
+printBuffer :: IO ()
+printBuffer = do
+  putStrLn ""
+  putStrLn ""
+
+displayBoard :: State -> IO ()
+displayBoard state = do
   let boardStr = createBoard state
-  putStrLn ""
-  putStrLn ""
+  printBuffer
   putStrLn boardStr
-  putStrLn ""
-  putStrLn ""
+  printBuffer
 
 createBoard state = createRow state
 

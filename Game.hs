@@ -17,10 +17,11 @@ start = evolve initialState
 process :: State -> String -> State
 process state move = initialState
 
-evolve :: State -> IO State
+
 printState :: State -> IO ()
 printState state = displayBoard state
 
+evolve :: State -> IO State
 evolve state = do
   move <- enterMove
   let newState = process state move

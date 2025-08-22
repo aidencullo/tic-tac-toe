@@ -9,9 +9,10 @@ printBuffer = do
 
 displayBoard :: State -> IO ()
 displayBoard state = do
+  putStrLn (show state)
   let boardStr = createBoard state
   printBuffer
-  putStrLn boardStr
+  printBoard boardStr
   printBuffer
 
 printBoard :: String -> IO ()
@@ -27,6 +28,11 @@ createRow (x:y:z:xs) = createCell [x, y, z] ++ "\n--------\n" ++ createRow xs
 
 createCell :: [Int] -> String
 createCell [] = ""
-createCell [x] = show x
-createCell (x:xs) = show x ++ "|" ++ createCell xs
+createCell [x] = showState x
+createCell (x:xs) = showState x ++ "|" ++ createCell xs
 
+showState :: Int -> String
+showState 0 = " "
+showState 1 = "X"
+showState 2 = "O"
+showState x = error "Invalid cell value"

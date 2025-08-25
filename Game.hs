@@ -24,9 +24,13 @@ start :: IO State
 start = evolve initialState
 
 process :: State -> Move -> State
-process state move = do
-  sanitizeInput
-  initialState
+process state move = sanitizeMove move `seq` initialState
+
+sanitizeMove :: Move -> ()
+sanitizeMove 0 = ()
+sanitizeMove 1 = ()
+sanitizeMove 2 = ()
+sanitizeMove _ = error "Invalid move"
 
 
 printState :: State -> IO ()

@@ -3,10 +3,19 @@ module Game where
 import Board
 import Types
 
-enterMove :: IO Move
+import Text.Read (readMaybe)
+
+strToInt :: String -> Move
+strToInt s = read s
+
 enterMove = do
-  putStrLn "Enter your move: "
-  getLine
+    putStrLn "Enter your move: "
+    moveString <- promptUser
+    let move = strToInt moveString
+    return move
+
+promptUser :: IO String
+promptUser = getLine
 
 initialState :: State
 initialState = replicate 9 0
@@ -14,8 +23,10 @@ initialState = replicate 9 0
 start :: IO State
 start = evolve initialState
 
-process :: State -> String -> State
-process state move = initialState
+process :: State -> Move -> State
+process state move = do
+  sanitizeInput
+  initialState
 
 
 printState :: State -> IO ()

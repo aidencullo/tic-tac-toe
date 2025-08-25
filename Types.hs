@@ -2,4 +2,4 @@ module Types where
 
 
 type State = [Int]
-type Move = String
+type Move = Int

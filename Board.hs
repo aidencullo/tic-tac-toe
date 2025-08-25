@@ -9,7 +9,6 @@ printBuffer = do
 
 displayBoard :: State -> IO ()
 displayBoard state = do
-  putStrLn (show state)
   let boardStr = createBoard state
   printBuffer
   printBoard boardStr

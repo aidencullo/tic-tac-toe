@@ -2,7 +2,6 @@ module Game where
 
 import Board
 import Types
-import Text.Read (readMaybe)
 
 -- Conversion
 strToInt :: String -> Move

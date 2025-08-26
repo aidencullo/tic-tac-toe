@@ -24,7 +24,9 @@ initialState = replicate 9 0
 
 -- Processing
 process :: State -> Move -> State
-process state move = sanitizeMove move `seq` initialState
+process state move =
+  let !_ = sanitizeMove move
+  return initialState
 
 sanitizeMove :: Move -> ()
 sanitizeMove 0 = ()

@@ -26,7 +26,10 @@ initialState = replicate 9 0
 process :: State -> Move -> State
 process state move =
   let !_ = sanitizeMove move
-  return initialState
+  let newState = applyMove state move
+  return newState
+
+applyMove state move = map (\x -> move) state
 
 sanitizeMove :: Move -> ()
 sanitizeMove 0 = ()
